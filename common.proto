@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message ImageFileReq {
+  optional double time_sent = 1;
+  optional bytes data = 2;
+}
+
+message ImageFileRecv {
+  optional double time_recv = 1;
+}
+
+message PingServer {
+  optional double time = 1;
+}
