@@ -15,3 +15,11 @@ message PingServer {
 message PingClient {
   double time_sent = 1;
 }
+
+message SendImage {
+  bytes data = 1;
+}
+
+message SendImageAck {
+  double time = 1;
+}
