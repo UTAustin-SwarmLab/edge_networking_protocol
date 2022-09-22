@@ -1,6 +1,5 @@
 import time
 import zmq
-import struct
 import common_pb2 as common
 
 context = zmq.Context()

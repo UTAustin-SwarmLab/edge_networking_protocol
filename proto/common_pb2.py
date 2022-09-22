@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,9 +18,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='common.proto',
   package='',
   syntax='proto3',
+  serialized_options=None,
   serialized_pb=_b('\n\x0c\x63ommon.proto\"/\n\x0cImageFileReq\x12\x11\n\ttime_sent\x18\x01 \x01(\x01\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\"\n\rImageFileRecv\x12\x11\n\ttime_recv\x18\x01 \x01(\x01\"\x0c\n\nPingServer\"\x1f\n\nPingClient\x12\x11\n\ttime_sent\x18\x01 \x01(\x01\"\x19\n\tSendImage\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"\x1c\n\x0cSendImageAck\x12\x0c\n\x04time\x18\x01 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -39,21 +38,21 @@ _IMAGEFILEREQ = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='ImageFileReq.data', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -77,14 +76,14 @@ _IMAGEFILERECV = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -108,7 +107,7 @@ _PINGSERVER = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -132,14 +131,14 @@ _PINGCLIENT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -163,14 +162,14 @@ _SENDIMAGE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -194,14 +193,14 @@ _SENDIMAGEACK = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -217,6 +216,7 @@ DESCRIPTOR.message_types_by_name['PingServer'] = _PINGSERVER
 DESCRIPTOR.message_types_by_name['PingClient'] = _PINGCLIENT
 DESCRIPTOR.message_types_by_name['SendImage'] = _SENDIMAGE
 DESCRIPTOR.message_types_by_name['SendImageAck'] = _SENDIMAGEACK
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ImageFileReq = _reflection.GeneratedProtocolMessageType('ImageFileReq', (_message.Message,), dict(
   DESCRIPTOR = _IMAGEFILEREQ,
