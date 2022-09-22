@@ -7,6 +7,7 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
+from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -18,9 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='common.proto',
   package='',
   syntax='proto3',
-  serialized_options=None,
-  serialized_pb=_b('\n\x0c\x63ommon.proto\"/\n\x0cImageFileReq\x12\x11\n\ttime_sent\x18\x01 \x01(\x01\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\"\n\rImageFileRecv\x12\x11\n\ttime_recv\x18\x01 \x01(\x01\"\x0c\n\nPingServer\"\x1f\n\nPingClient\x12\x11\n\ttime_sent\x18\x01 \x01(\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0c\x63ommon.proto\"/\n\x0cImageFileReq\x12\x11\n\ttime_sent\x18\x01 \x01(\x01\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\"\n\rImageFileRecv\x12\x11\n\ttime_recv\x18\x01 \x01(\x01\"\x0c\n\nPingServer\"\x1f\n\nPingClient\x12\x11\n\ttime_sent\x18\x01 \x01(\x01\"\x19\n\tSendImage\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"\x1c\n\x0cSendImageAck\x12\x0c\n\x04time\x18\x01 \x01(\x01\x62\x06proto3')
 )
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -38,21 +39,21 @@ _IMAGEFILEREQ = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None),
     _descriptor.FieldDescriptor(
       name='data', full_name='ImageFileReq.data', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=None,
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -76,14 +77,14 @@ _IMAGEFILERECV = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=None,
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -107,7 +108,7 @@ _PINGSERVER = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=None,
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -131,14 +132,14 @@ _PINGCLIENT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=None,
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -148,11 +149,74 @@ _PINGCLIENT = _descriptor.Descriptor(
   serialized_end=146,
 )
 
+
+_SENDIMAGE = _descriptor.Descriptor(
+  name='SendImage',
+  full_name='SendImage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='SendImage.data', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=148,
+  serialized_end=173,
+)
+
+
+_SENDIMAGEACK = _descriptor.Descriptor(
+  name='SendImageAck',
+  full_name='SendImageAck',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='SendImageAck.time', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=175,
+  serialized_end=203,
+)
+
 DESCRIPTOR.message_types_by_name['ImageFileReq'] = _IMAGEFILEREQ
 DESCRIPTOR.message_types_by_name['ImageFileRecv'] = _IMAGEFILERECV
 DESCRIPTOR.message_types_by_name['PingServer'] = _PINGSERVER
 DESCRIPTOR.message_types_by_name['PingClient'] = _PINGCLIENT
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+DESCRIPTOR.message_types_by_name['SendImage'] = _SENDIMAGE
+DESCRIPTOR.message_types_by_name['SendImageAck'] = _SENDIMAGEACK
 
 ImageFileReq = _reflection.GeneratedProtocolMessageType('ImageFileReq', (_message.Message,), dict(
   DESCRIPTOR = _IMAGEFILEREQ,
@@ -181,6 +245,20 @@ PingClient = _reflection.GeneratedProtocolMessageType('PingClient', (_message.Me
   # @@protoc_insertion_point(class_scope:PingClient)
   ))
 _sym_db.RegisterMessage(PingClient)
+
+SendImage = _reflection.GeneratedProtocolMessageType('SendImage', (_message.Message,), dict(
+  DESCRIPTOR = _SENDIMAGE,
+  __module__ = 'common_pb2'
+  # @@protoc_insertion_point(class_scope:SendImage)
+  ))
+_sym_db.RegisterMessage(SendImage)
+
+SendImageAck = _reflection.GeneratedProtocolMessageType('SendImageAck', (_message.Message,), dict(
+  DESCRIPTOR = _SENDIMAGEACK,
+  __module__ = 'common_pb2'
+  # @@protoc_insertion_point(class_scope:SendImageAck)
+  ))
+_sym_db.RegisterMessage(SendImageAck)
 
 
 # @@protoc_insertion_point(module_scope)
