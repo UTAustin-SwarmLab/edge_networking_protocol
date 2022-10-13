@@ -19,17 +19,25 @@ log = open("timestamps.csv", "w")
 
 try:
   while True:
+    # Start measuring time
     start_time = time.time()
+
+    # Send image over ZMQ socket
     socket.send(serial_send_image)
+
+    # Receive ack for the image being received
     message = socket.recv()
     image_ack.ParseFromString(message)
+
+    # Stop measuring time
     end_time = time.time()
 
+    # Log the time
     print(f"Image acked at {image_ack.time}")
     packet_delay_ms = (end_time - start_time) * 1000
     print(f"This is duration: {packet_delay_ms} ms")
     log.write(f"{packet_delay_ms},\n")
 
 except KeyboardInterrupt:
-    log.close()
+  log.close()
 

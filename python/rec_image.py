@@ -10,12 +10,12 @@ image = common.SendImage()
 image_ack = common.SendImageAck()
 
 while True:
+  # Receive the image over the network
   message = socket.recv()
-#   image.ParseFromString(message)
 
-#   with open("pohans-favorite.png", "wb") as favorite:
-#     favorite.write(image.data)
-
+  # Create an image ack and the time the image was received and serialize the packets
   image_ack.time = time.time()
   serial_image_ack = image_ack.SerializeToString()
+
+  # Send the ack over ZMQ socket to client
   socket.send(serial_image_ack)
