@@ -23,3 +23,12 @@ message SendImage {
 message SendImageAck {
   double time = 1;
 }
+
+message SendBytes {
+  int32 packet_num = 1;
+  bytes data = 2;
+}
+
+message SendBytesAck {
+  int32 packet_num = 1;
+}

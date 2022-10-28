@@ -6,18 +6,15 @@ context = zmq.Context()
 socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
 
-image = common.SendBytes()
-image_ack = common.SendBytesAck()
+image = common.SendImage()
+image_ack = common.SendImageAck()
 
 while True:
   # Receive the image over the network
   message = socket.recv()
 
-  # Read the bytes received
-  image.ParseFromString(message)
-
   # Create an image ack and the time the image was received and serialize the packets
-  image_ack.packet_num = image.packet_num
+  image_ack.time = time.time()
   serial_image_ack = image_ack.SerializeToString()
 
   # Send the ack over ZMQ socket to client
